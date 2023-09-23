@@ -1,0 +1,50 @@
+@use "../abstracts/" as abs;
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: abs.rem(22);
+
+  &__image {
+    background-image: url(../static/img/headshot.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 315 / 345;
+    border-radius: 1rem;
+  }
+
+  &Text {
+    display: flex;
+    flex-direction: column;
+    gap: abs.rem(34);
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+      gap: abs.rem(30);
+      color: var(--clr-dark-gray);
+    }
+
+    &__name {
+      font-weight: 600;
+      font-size: abs.rem(24);
+    }
+
+    &__title {
+      color: var(--cr-medium);
+      font-size: abs.rem(18);
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: abs.rem(18);
+
+      i {
+        font-size: abs.rem(20);
+      }
+    }
+  }
+}
