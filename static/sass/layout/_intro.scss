@@ -5,6 +5,15 @@
   flex-direction: column;
   gap: abs.rem(22);
 
+  grid-area: intro;
+
+  @include abs.breakpoint(medium) {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 1.5rem;
+  }
+
   &__image {
     background-image: url(../static/img/headshot.jpg);
     background-position: center;
@@ -12,6 +21,11 @@
     background-size: cover;
     aspect-ratio: 315 / 345;
     border-radius: 1rem;
+
+    @include abs.breakpoint(medium) {
+      align-self: center;
+      aspect-ratio: 1600 / 1750;
+    }
   }
 
   &Text {
@@ -19,11 +33,20 @@
     flex-direction: column;
     gap: abs.rem(34);
 
+    @include abs.breakpoint(large) {
+      gap: abs.rem(37);
+    }
+
     &__top {
       display: flex;
       flex-direction: column;
       gap: abs.rem(30);
       color: var(--clr-dark-gray);
+
+      @include abs.breakpoint(large) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
     }
 
     &__name {
@@ -33,6 +56,7 @@
 
     &__title {
       color: var(--cr-medium);
+      font-weight: 500;
       font-size: abs.rem(18);
     }
 
@@ -45,6 +69,10 @@
       i {
         font-size: abs.rem(20);
       }
+    }
+
+    &__main {
+      width: 75%;
     }
   }
 }

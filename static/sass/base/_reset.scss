@@ -53,8 +53,12 @@ body {
   padding-top: 1.5rem;
   padding-inline: 0.5rem;
 
+  @include abs.breakpoint(medium) {
+    padding-inline: abs.rem(22);
+  }
+
   @include abs.breakpoint(large) {
-    // padding-inline: 15%;
+    padding-inline: 15%;
     display: grid;
     grid-template-columns: 2fr 3fr;
     // grid-auto-rows: minmax(100px, auto);
