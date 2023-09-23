@@ -207,8 +207,26 @@ select {
 .introText__info i {
   font-size: 1.25rem;
 }
-.introText__main {
-  width: 75%;
+@media (min-width: 56.25em) {
+  .introText__main {
+    width: 75%;
+  }
+}
+
+.skills {
+  grid-area: skills;
+}
+.skills__container {
+  padding-left: 10%;
+  display: flex;
+  gap: 30%;
+}
+.skills__list {
+  list-style: none;
+  padding: 0;
+}
+.skills__list-item {
+  color: var(--clr-dark);
 }
 
 .sr-only {

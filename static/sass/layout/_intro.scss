@@ -72,7 +72,9 @@
     }
 
     &__main {
-      width: 75%;
+      @include abs.breakpoint(large) {
+        width: 75%;
+      }
     }
   }
 }
