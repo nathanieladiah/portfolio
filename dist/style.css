@@ -78,7 +78,7 @@ body {
     padding-inline: 15%;
     display: grid;
     grid-template-columns: 2fr 3fr;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(6, min-content);
     grid-template-areas: "intro intro" "skills     blog" "hobbies    blog" "hobbies    experience" "projectBar projectBar" "projects   projects";
     -moz-column-gap: 2rem;
          column-gap: 2rem;
@@ -309,6 +309,63 @@ select {
   .blog__link {
     margin-top: 0;
   }
+}
+
+.hobbies {
+  grid-area: hobbies;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.hobbies__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 43.75em) {
+  .hobbies__container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 90em) {
+  .hobbies__container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: start;
+  }
+}
+
+.hobby {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 43.75em) {
+  .hobby {
+    flex-basis: 45%;
+  }
+}
+@media (min-width: 90em) {
+  .hobby {
+    flex-basis: auto;
+  }
+}
+.hobby__img {
+  width: 100%;
+  aspect-ratio: 16/6;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
+}
+.hobby__title {
+  color: var(--clr-emphasis);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.hobby__description {
+  font-size: 1rem;
 }
 
 .sr-only {

@@ -1,0 +1,59 @@
+@use "../abstracts/" as abs;
+
+.hobbies {
+  grid-area: hobbies;
+
+  display: flex;
+  flex-direction: column;
+  gap: abs.rem(24);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: abs.rem(24);
+
+    @include abs.breakpoint(medium) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include abs.breakpoint(xlarge) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: start;
+    }
+  }
+}
+
+.hobby {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include abs.breakpoint(medium) {
+    flex-basis: 45%;
+  }
+
+  @include abs.breakpoint(xlarge) {
+    flex-basis: auto;
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 16 / 6;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+  }
+
+  &__title {
+    color: var(--clr-emphasis);
+    font-size: abs.rem(18);
+    font-weight: 600;
+  }
+
+  &__description {
+    font-size: 1rem;
+  }
+}
