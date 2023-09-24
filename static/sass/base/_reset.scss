@@ -57,7 +57,7 @@ body {
     padding-inline: abs.rem(22);
   }
 
-  @include abs.breakpoint(large) {
+  @include abs.breakpoint(xlarge) {
     padding-inline: 15%;
     display: grid;
     grid-template-columns: 2fr 3fr;
