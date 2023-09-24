@@ -50,11 +50,12 @@ body {
   flex-direction: column;
   gap: abs.rem(22);
 
-  padding-top: 1.5rem;
+  padding-block: 1.5rem;
   padding-inline: 0.5rem;
 
   @include abs.breakpoint(medium) {
     padding-inline: abs.rem(22);
+    padding-block: 2rem;
   }
 
   @include abs.breakpoint(xlarge) {
@@ -64,7 +65,7 @@ body {
     grid-template-rows: repeat(6, min-content);
     // grid-auto-rows: minmax(100px, auto);
     grid-template-areas:
-      "intro intro"
+      "intro      intro"
       "skills     blog"
       "hobbies    blog"
       "hobbies    experience"

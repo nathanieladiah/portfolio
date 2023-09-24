@@ -5,6 +5,8 @@
   border-radius: 1rem;
   padding: abs.rem(22);
 
+  overflow: hidden;
+
   &__header {
     color: var(--clr-dark-gray);
     font-weight: 500;

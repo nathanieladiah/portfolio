@@ -3,6 +3,8 @@
 .projectBar {
   grid-area: projectBar;
 
+  overflow-x: scroll;
+
   &__selections {
     margin-top: 1rem;
 

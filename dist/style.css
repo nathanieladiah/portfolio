@@ -65,12 +65,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.375rem;
-  padding-top: 1.5rem;
+  padding-block: 1.5rem;
   padding-inline: 0.5rem;
 }
 @media (min-width: 43.75em) {
   body {
     padding-inline: 1.375rem;
+    padding-block: 2rem;
   }
 }
 @media (min-width: 90em) {
@@ -79,7 +80,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: repeat(6, min-content);
-    grid-template-areas: "intro intro" "skills     blog" "hobbies    blog" "hobbies    experience" "projectBar projectBar" "projects   projects";
+    grid-template-areas: "intro      intro" "skills     blog" "hobbies    blog" "hobbies    experience" "projectBar projectBar" "projects   projects";
     -moz-column-gap: 2rem;
          column-gap: 2rem;
     row-gap: 2rem;
@@ -117,6 +118,7 @@ select {
   background-color: white;
   border-radius: 1rem;
   padding: 1.375rem;
+  overflow: hidden;
 }
 .card__header {
   color: var(--clr-dark-gray);
@@ -374,6 +376,7 @@ select {
 
 .projectBar {
   grid-area: projectBar;
+  overflow-x: scroll;
 }
 .projectBar__selections {
   margin-top: 1rem;
