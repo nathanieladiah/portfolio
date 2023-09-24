@@ -368,6 +368,33 @@ select {
   font-size: 1rem;
 }
 
+.experience {
+  grid-area: experience;
+}
+
+.projectBar {
+  grid-area: projectBar;
+}
+.projectBar__selections {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.projectBar__button {
+  border-radius: 0.75rem;
+  border: 1px solid var(--clr-dark-gray);
+  padding: 0.5rem 1.375rem;
+  background-color: transparent;
+  color: var(--clr-dark-gray);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+.projectBar__button--active {
+  background-color: var(--clr-blue);
+  border-color: var(--clr-blue);
+  color: white;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
