@@ -28,3 +28,78 @@
     }
   }
 }
+
+.projects {
+  grid-area: projects;
+
+  display: flex;
+  flex-direction: column;
+  gap: abs.rem(22);
+
+  @include abs.breakpoint(medium) {
+    flex-direction: row;
+  }
+
+  // Probably don't need this one
+  @include abs.breakpoint(xlarge) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: abs.rem(30);
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+
+  &--third {
+    @include abs.breakpoint(medium) {
+      display: none;
+    }
+
+    @include abs.breakpoint(xlarge) {
+      display: flex;
+    }
+  }
+
+  &__image {
+    img {
+      aspect-ratio: 292 / 217;
+      width: 100%;
+      border-radius: 12px;
+    }
+  }
+
+  &__tags {
+    margin-top: abs.rem(24);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    span {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--clr-dark-gray);
+    }
+  }
+
+  &__title {
+    margin-top: abs.rem(22);
+    color: var(--clr-dark-gray);
+    font-weight: 500;
+    font-size: abs.rem(24);
+  }
+
+  &__description {
+    margin-top: abs.rem(18);
+    color: var(--clr-medium);
+    font-size: 1rem;
+  }
+
+  &__actions {
+    margin-top: abs.rem(40);
+    display: flex;
+    gap: abs.rem(11);
+  }
+}
