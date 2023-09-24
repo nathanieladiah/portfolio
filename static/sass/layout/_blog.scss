@@ -1,0 +1,42 @@
+@use "../abstracts/" as abs;
+
+.blog {
+  grid-area: blog;
+
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: var(--clr-dark);
+    font-size: abs.rem(24);
+    font-weight: 500;
+    margin-top: abs.rem(18);
+
+    order: 2;
+  }
+
+  &__image {
+    order: 1;
+    margin-top: 1rem;
+
+    img {
+      border-radius: 1rem;
+    }
+  }
+
+  &__blurb {
+    order: 3;
+    margin-top: abs.rem(35);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  &__link {
+    order: 4;
+    margin-top: abs.rem(28);
+    color: var(--clr-blue);
+    text-decoration: none;
+  }
+}

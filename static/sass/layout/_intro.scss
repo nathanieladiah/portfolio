@@ -10,8 +10,12 @@
   @include abs.breakpoint(medium) {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 2fr;
     column-gap: 1.5rem;
+  }
+
+  @include abs.breakpoint(large) {
+    grid-template-columns: 1fr 4fr;
   }
 
   &__image {
